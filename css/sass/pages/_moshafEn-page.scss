@@ -1,0 +1,37 @@
+.box-sowar {
+    @extend .box-adkhar;
+    .sora {
+        @extend .dikr;
+        &.active ,&:hover{
+            background-color: $mainColor;
+            
+        }
+        &.active h2,&:hover h2 {
+            color: black;
+        }
+    }
+} 
+.box-sora {
+    text-align: center;
+    margin-top: 100px;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    div {
+        
+        padding: 25px;
+        border-radius: 6px;
+        background-color: #d1d5d9;
+    }
+    .name-sora {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    .textSora {
+        h2 {
+            line-height: 2;
+        }
+    }
+}

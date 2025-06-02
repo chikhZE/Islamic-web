@@ -1,0 +1,15 @@
+html(lang="en")
+    include ../pugjs/_head.pug
+    - let adhanClass = "active"
+    body
+        .page 
+            include ../pugjs/_slider.pug
+            .content
+                .title 
+                    h1 المنطقة : <span>الجزائر</span>
+                .box-date 
+                    h2.shamsi
+                    h2.hijri 
+                .box-adhan 
+
+        script(src="../js/main.js")

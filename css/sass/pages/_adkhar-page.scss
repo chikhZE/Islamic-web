@@ -1,0 +1,41 @@
+.box-adkhar {
+    @include gridB(300px);
+    max-height: 77px * 3 + 15px;
+    overflow-y: scroll;
+    .dikr {
+        min-width: 100%;
+        background-color: #d1d5d9;
+        width: 300px;
+        text-align: center;
+        border-radius: 6px;
+        color: $mainColor;
+        cursor: pointer;
+        &.active ,&:hover{
+            background-color: $mainColor;
+            
+        }
+        &.active h2,&:hover h2 {
+            color: black;
+        }
+    }
+}
+.box-dikr {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    .theDikr {
+        background-color: #d1d5d9;
+        padding: 5px 15px;
+        margin-bottom: 15px;
+        border-radius: 6px;
+        h2 {
+            font-weight: 50;
+            line-height: 1.7;
+        }
+        span {
+            font-size: 15px;
+            font-weight: bold;
+            color: red;
+        }
+
+    }
+}

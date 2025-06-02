@@ -1,0 +1,15 @@
+doctype html
+html(lang="en")
+    include ../pugjs/_head.pug
+    - let moshafClass = "active"
+    body
+        .page 
+            include ../pugjs/_slider.pug
+            .content.content-moshaf
+                .box-quran
+                    .imgs
+                        img(src="../imgs/icons/angle-right.png",class="right",width="30px")
+                        img(src="../imgs/quran-imgs/604.png", alt="",class="safha")
+                        img(src="../imgs/icons/angle-left.png",class="left",width="30px")
+                    input(type="number", name="",max="604",min="1" id="moshafNumber")
+        script(src="../js/main.js") 

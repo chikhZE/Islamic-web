@@ -1,0 +1,82 @@
+
+.box-quraa {
+    @include flexmid("flex-start","center");
+    gap: 30px;
+    overflow:scroll;
+    overflow-y:auto;
+    .qari {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include flexmid("center","center");
+        flex: 1;
+        min-width: 250px;
+      flex-direction: column;
+      gap: 5px;
+      h2 {
+        font-size: 15px;
+      }
+    }
+    
+    .active, .qari:hover {
+      border-bottom: 1px solid $mainColor;
+      cursor: pointer;
+    }
+  
+    .active h2 {
+      color: $mainColor;
+    }
+  
+    .qari {
+      &:hover h2 {
+        color: $mainColor;
+      }
+  
+      img {
+        width: 100%;
+      }
+    }
+}
+.box-surah {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    @include gridB(300px);
+    .box {
+        border: 1px solid $SmainColor;
+        min-width: 300px;
+        border-radius: 6px;
+        background-color: #ddd;
+        @include flexmid("space-between","center");
+        padding: 5px 15px;
+        img {
+            width: 30px;
+            cursor: pointer;
+        }
+        .first {
+          @include flexmid("space-between","center");
+          gap: 5px;
+            img {
+                padding: 5px;
+                background-color: $SmainColor;
+                border-radius: 6px;
+                cursor: pointer;
+            }
+            h3 {
+                color: #000;
+            }
+            .surah-name {
+                color: $mainColor;
+            }
+        }
+    }
+}
+.error {
+    position: fixed;
+    display: none;
+    background-color: red;
+    padding: 5px 15px;
+    border-radius: 6px;
+    color: #fff;
+    top: 15px;
+    transform: translateX(-50%);
+}

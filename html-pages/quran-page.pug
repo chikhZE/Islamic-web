@@ -1,0 +1,13 @@
+doctype html
+html(lang="en")
+    include ../pugjs/_head.pug
+    - let quranClass = "active"
+    body
+        .page 
+            include ../pugjs/_slider.pug
+            .content 
+                .box-quraa
+                .box-surah 
+                .error 
+                    h2 الاتصال بالانترنت ضعيف الرجاء اعادة تحميل الصفحة
+        script(src="../js/main.js") 

@@ -1,0 +1,36 @@
+.slider {
+    min-height: 100%;
+    flex: 1;
+    border-left: 1px solid $borderColor;
+    padding: 15px;
+    background-color: #d1d3d9;
+    max-width: 350px;
+    @include minMedium {
+        display: none;
+    }
+    ul {
+        padding: 5px;
+        li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 5px;
+            border-radius: 8px;
+            opacity: .5;
+            transition: .3s ease;
+            &.active,&:hover {
+                background-color: $mainColor;
+                opacity: 1;
+            }
+            a {
+                padding: 10px 15px;
+                width: 100%;
+                display: block;
+                font-size: 18px;
+                cursor: pointer;
+                color: #000;
+            }
+        }
+    }
+}

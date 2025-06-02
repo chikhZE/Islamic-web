@@ -1,0 +1,33 @@
+.content-moshaf {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .box-quran {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+        .imgs{
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            .right,.left {
+                cursor: pointer;
+            }
+        }
+        input {
+            border: none;
+            border-radius: 6px;
+            background-color: #d1d5d9;
+            padding: 15px;
+            min-width: 150px;
+            height: 25px;
+        }
+        input:focus {
+            outline: none;
+        }
+    }
+}
