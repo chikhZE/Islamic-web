@@ -18,7 +18,7 @@ A JavaScript-based web application that offers a rich set of Islamic resources, 
 ## Demo
 
 Check out the live demo here:  
-[demolink](https://chikhze.github.io/Islamic-web/)
+[Try it !!](https://chikhze.github.io/Islamic-web/)
 
 
 ---
@@ -26,7 +26,7 @@ Check out the live demo here:
 ## Screenshots
 
 ### Quran Reciters & Surah Selection  
-[image](https://github.com/user-attachments/assets/715cd3f6-bc3e-492e-a503-f9b8c7c970dc)
+![image](https://github.com/user-attachments/assets/715cd3f6-bc3e-492e-a503-f9b8c7c970dc)
 
 
 ### Adkhar Section  
