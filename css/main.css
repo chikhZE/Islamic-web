@@ -39,6 +39,15 @@ Overlay Mixin
   }
 }
 
+.wait {
+  position: absolute;
+  z-index: 1002;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: none;
+}
+
 .bars {
   z-index: 2650;
   width: 64px;

@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let safhaNumber = 1;
   let arrL = document.querySelector(".left");
   let bars = document.querySelector(".bars");
+  const wait = document.querySelector('.wait')
   let displayMinSlider = false;
   const quraa = {
     0: {
@@ -218,6 +219,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function getQuraa() {
+    wait.style.display = "block"
     let url = `https://www.mp3quran.net/api/v3/reciters`;
     fetch(url)
       .then((response) => response.json())
@@ -247,6 +249,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
           }
         }
+        wait.style.display = "none"
       })
       .catch((error) => {
         document.querySelector(".error").style.display = "block";
@@ -344,6 +347,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function getAdkhar() {
+    wait.style.display = "block"
+
     let url = "json/adhkar.json";
     fetch(url)
       .then((data) => data.json())
@@ -361,6 +366,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         getDikr(document.querySelectorAll(".dikr")[0].id);
         clickOnDikr();
+        wait.style.display = "none"
+
       });
   }
   function clickOnDikr() {
@@ -377,6 +384,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function getDikr(dikr) {
     let url = "json/adhkar.json";
     document.querySelector(".box-dikr").innerHTML = "";
+    wait.style.display = "block"
 
     fetch(url)
       .then((data) => data.json())
@@ -393,10 +401,13 @@ document.addEventListener("DOMContentLoaded", () => {
             }
           }
         }
+        wait.style.display = "none"
+
       });
   }
 
   function getAdhan() {
+    wait.style.display = "block"
     let url = `https://api.aladhan.com/v1/timingsByAddress/${date.getDate()}-${
       date.getMonth() + 1
     }-${date.getFullYear()}?address=algeria`;
@@ -416,6 +427,8 @@ document.addEventListener("DOMContentLoaded", () => {
           data.data.date.readable;
         dateContainer.querySelector(".hijri").textContent =
           data.data.date.hijri.date;
+          wait.style.display = "none"
+
       })
       .catch((error) => {
         console.log(error);
@@ -467,6 +480,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function getMoshafEn() {
+    wait.style.display = "block"
+
     let url = `https://api.alquran.cloud/v1/quran/en.asad`;
     fetch(url)
       .then((response) => response.json())
@@ -483,6 +498,8 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector(".sora").classList.add("active");
         getSoraContent();
         clickOnSora();
+        wait.style.display = "none"
+
       });
   }
   function clickOnSora() {
@@ -497,6 +514,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
   function getSoraContent() {
+    wait.style.display = "block"
+
     let url = `https://api.alquran.cloud/v1/quran/en.asad`;
     fetch(url)
       .then((response) => response.json())
@@ -524,6 +543,8 @@ document.addEventListener("DOMContentLoaded", () => {
             soraContainer.innerHTML = soraDiv;
           }
         }
+        wait.style.display = "none"
+
       });
   }
 
