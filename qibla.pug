@@ -1,14 +1,14 @@
 doctype html
 html(lang="en")
-    include ../pugjs/_head.pug
+    include pugjs/_head.pug
     - let qiblaClass = "active"
     body
         .page 
-            include ../pugjs/_slider.pug
+            include pugjs/_slider.pug
             .content.content-moshaf
                 .box-qibla(style="")
                     img(src="../imgs/compass/compass.png" width="480px" style="transition: transform 0.5s;" id="compass")
                     .box-btns
                         input(type="text", value="Medea" id="location",style="")
                         button(style="") map
-        script(src="../js/main.js") 
+        script(src="js/main.js") 
