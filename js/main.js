@@ -230,7 +230,7 @@ document.addEventListener("DOMContentLoaded", () => {
               let h2 = document.createElement("h2");
               h2.textContent = data.reciters[i].name;
               let img = document.createElement("img");
-              img.src = `../imgs/quraa/${quraa[k].imgSrc}`;
+              img.src = `imgs/quraa/${quraa[k].imgSrc}`;
               qari.append(img);
               qari.append(h2);
               quraaContainer.append(qari);
@@ -265,10 +265,10 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       surah.innerHTML = `
             <div class="box"> 
-            <div class="first"> <img src="../imgs/icons/play-button-arrowhead.png" class="click" alt="">
+            <div class="first"> <img src="imgs/icons/play-button-arrowhead.png" class="click" alt="">
                 <h3>${surahNumber}</h3>
                 <h3 class="surah-name">${swarNames[i]}</h3>
-            </div><img src="../imgs/icons/dots.png" class="install" id="${surahNumber}" alt="">
+            </div><img src="imgs/icons/dots.png" class="install" id="${surahNumber}" alt="">
             </div>
             `;
       surahContainer.append(surah);
@@ -284,7 +284,7 @@ document.addEventListener("DOMContentLoaded", () => {
         e.target.parentElement.classList.add("active");
         surah.pause();
         document.querySelectorAll(".click").forEach((element) => {
-          element.src = "../imgs/icons/play-button-arrowhead.png";
+          element.src = "imgs/icons/play-button-arrowhead.png";
         });
       });
     });
@@ -306,12 +306,12 @@ document.addEventListener("DOMContentLoaded", () => {
             if (e.target.src.includes("play-button-arrowhead.png")) {
               surah.play();
               document.querySelectorAll(".click").forEach((element) => {
-                element.src = "../imgs/icons/play-button-arrowhead.png";
+                element.src = "imgs/icons/play-button-arrowhead.png";
               });
-              e.target.src = "../imgs/icons/pause.png";
+              e.target.src = "imgs/icons/pause.png";
             } else if (e.target.src.includes("pause.png")) {
               document.querySelectorAll(".click").forEach((element) => {
-                element.src = "../imgs/icons/play-button-arrowhead.png";
+                element.src = "imgs/icons/play-button-arrowhead.png";
               });
               surah.pause();
             }
@@ -342,7 +342,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function getAdkhar() {
-    let url = "../json/adhkar.json";
+    let url = "json/adhkar.json";
     fetch(url)
       .then((data) => data.json())
       .then((data) => {
@@ -373,7 +373,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
   function getDikr(dikr) {
-    let url = "../json/adhkar.json";
+    let url = "json/adhkar.json";
     document.querySelector(".box-dikr").innerHTML = "";
 
     fetch(url)
@@ -436,7 +436,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (input.value >= 1 && input.value <= 604) {
         safhaNumber = input.value;
         isMsohaf();
-        safha.src = `../imgs/quran-imgs/${safhaNumber}.png`;
+        safha.src = `imgs/quran-imgs/${safhaNumber}.png`;
       }
       if (input.value == 1) {
         arrR.style.display = "none";
@@ -446,19 +446,19 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   }
   function moshaf() {
-    safha.src = `../imgs/quran-imgs/${safhaNumber}.png`;
+    safha.src = `imgs/quran-imgs/${safhaNumber}.png`;
     document.querySelector("input").value = safhaNumber;
     inputChange();
     isMsohaf();
     arrR.addEventListener("click", () => {
       safhaNumber--;
-      safha.src = `../imgs/quran-imgs/${safhaNumber}.png`;
+      safha.src = `imgs/quran-imgs/${safhaNumber}.png`;
       isMsohaf();
       document.querySelector("input").value = safhaNumber;
     });
     arrL.addEventListener("click", () => {
       safhaNumber++;
-      safha.src = `../imgs/quran-imgs/${safhaNumber}.png`;
+      safha.src = `imgs/quran-imgs/${safhaNumber}.png`;
       isMsohaf();
       document.querySelector("input").value = safhaNumber;
     });
