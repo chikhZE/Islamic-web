@@ -1,5 +1,10 @@
 
 .box-qibla {
+    img {
+        @include minMedium {
+            width: 300px;
+        }
+    }
     display:flex;
     flex-direction:column;
     gap:100px;

@@ -15,6 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
   let arrR = document.querySelector(".right");
   let safhaNumber = 1;
   let arrL = document.querySelector(".left");
+  let bars = document.querySelector(".bars");
+  let displayMinSlider = false;
   const quraa = {
     0: {
       name: "محمد اللحيدان",
@@ -69,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
       name: "عبدالرحمن السديس",
       imgSrc: "abdul-rahman-al-sudais.png",
       server: "https://server11.mp3quran.net/sds/",
-    }
+    },
   };
   const swarNames = [
     "الفاتحة",
@@ -554,4 +556,22 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   }
   initializeApp();
+
+  bars.onclick = () => {
+    event.stopPropagation();
+    document.querySelector(".overlay").style.display = "block";
+    document.querySelector(".slider").style.display = "block";
+    bars.style.display = "none";
+    displayMinSlider = true;
+  };
+  document.body.onclick = () => {
+    if (displayMinSlider) {
+      bars.style.display = "block";
+      document.querySelector(".overlay").style.display = "none";
+      document.querySelector(".slider").style.display = "none";
+      displayMinSlider = false;
+    }
+  };
+    
+  
 });

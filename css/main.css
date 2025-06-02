@@ -25,9 +25,37 @@ Overlay Mixin
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  min-height: 100%;
+}
+
+@media (max-width: 1100px) {
+  .overlay {
+    width: 100%;
+    min-height: 100%;
+    background-color: rgba(0, 0, 0, 0.616);
+    display: none;
+    z-index: 998;
+    position: fixed;
+  }
+}
+
+.bars {
+  z-index: 2650;
+  width: 64px;
+  height: 64px;
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+@media (max-width: 1100px) {
+  .bars {
+    display: block;
+  }
 }
 
 .slider {
+  z-index: 999;
   min-height: 100%;
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -40,6 +68,11 @@ Overlay Mixin
 @media (max-width: 1100px) {
   .slider {
     display: none;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    min-height: 100%;
   }
 }
 .slider ul {
@@ -353,6 +386,11 @@ a {
 .content-moshaf .box-quran .imgs .right, .content-moshaf .box-quran .imgs .left {
   cursor: pointer;
 }
+@media (max-width: 1100px) {
+  .content-moshaf .box-quran .imgs .safha {
+    max-width: 350px;
+  }
+}
 .content-moshaf .box-quran input {
   border: none;
   border-radius: 6px;
@@ -413,6 +451,11 @@ a {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 100px;
+}
+@media (max-width: 1100px) {
+  .box-qibla img {
+    width: 300px;
+  }
 }
 .box-qibla input {
   height: 50px;

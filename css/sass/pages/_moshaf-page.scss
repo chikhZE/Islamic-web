@@ -9,7 +9,6 @@
         justify-content: center;
         align-items: center;
         .imgs{
-
             display: flex;
             justify-content: center;
             align-items: center;
@@ -17,6 +16,12 @@
             .right,.left {
                 cursor: pointer;
             }
+            .safha {
+                @include minMedium {
+                    max-width: 350px;
+                }
+            }
+            
         }
         input {
             border: none;
